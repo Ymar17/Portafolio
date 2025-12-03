@@ -582,15 +582,17 @@ body {
         align-items: center;
         padding: 20px 0;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100%);
+        transform: translateY(-20px);  /* ← CAMBIA de -100% a -20px */
         opacity: 0;
         transition: var(--transition);
         z-index: 999;
+        pointer-events: none;  /* ← Añade esto */
     }
     
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
+        pointer-events: auto;  /* ← Y esto */
     }
     
     .main-title {
